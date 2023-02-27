@@ -1,0 +1,14 @@
+Testing
+
+
+<h2><%= @spaceship.name %></h2>
+<p><%= @spaceship.description %></p>
+<p><%= @spaceship.armaments %></p>
+<p><%= @spaceship.speed %></p>
+<p><%= @spaceship.price %></p>
+<p><%= @spaceship.capacity %><p>
+<ul class="list-unstyled">
+  <% @spaceship.reviews.each do |review| %>
+    <li><%= review.rating %> ⭐️ - <%= review.content %></li>
+  <% end %>
+</ul>
