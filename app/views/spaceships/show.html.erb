@@ -1,14 +1,21 @@
 Testing
 
 
-<h2><%= @spaceship.name %></h2>
-<p><%= @spaceship.description %></p>
-<p><%= @spaceship.armaments %></p>
-<p><%= @spaceship.speed %></p>
-<p><%= @spaceship.price %></p>
-<p><%= @spaceship.capacity %><p>
-<ul class="list-unstyled">
-  <% @spaceship.reviews.each do |review| %>
-    <li><%= review.rating %> ⭐️ - <%= review.content %></li>
-  <% end %>
-</ul>
+<h2>Name:  <%= @spaceship.name %></h2>
+<p>Description: <%=@spaceship.description %></p>
+<p>Armament: <%= @spaceship.armaments %></p>
+<p>Speed: <%= @spaceship.speed %> lightyears/second</p>
+<p>Price: <%= @spaceship.price %> flugozian credits.</p>
+<p>Capacity: <%= @spaceship.capacity %> non-crew passengers (divide by 5 for amalfous blobs)<p>
+
+<%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
+
+
+<%# <ul class="list-unstyled"> %>
+  <%# <% @spaceship.reviews.each do |review| %>
+  <%# <% if booking.review.exist?%> %>
+    <%# <li><%= review.rating %> ⭐️ -
+    <%# <%= review.content %>
+    <%# </li> %> %> %>
+  <%# <% end %> %> %>
+<%# </ul> %>
