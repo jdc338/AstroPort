@@ -25,7 +25,7 @@ class SpaceshipsController < ApplicationController
   def destroy
     @spaceship = Spaceship.find(params[:id])
     @spaceship.destroy
-    redirect_to spaceships_path, status: :see_other
+    redirect_to spaceship_path, status: :see_other
   end
 
   private
