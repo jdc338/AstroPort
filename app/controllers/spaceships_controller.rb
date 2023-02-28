@@ -14,6 +14,7 @@ class SpaceshipsController < ApplicationController
 
   def create
     @spaceship = Spaceship.new(spaceship_params)
+    @spaceship.user = current_user
     if @spaceship.save
       redirect_to spaceship_path(@spaceship)
     else
@@ -24,6 +25,6 @@ class SpaceshipsController < ApplicationController
   private
 
   def spaceship_params
-    params.require(:spaceship).permit(:name, :description, :capacity, :price, :speed)
+    params.require(:spaceship).permit(:name, :description, :armaments, :capacity, :price, :speed)
   end
 end
