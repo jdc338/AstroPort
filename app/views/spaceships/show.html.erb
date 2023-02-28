@@ -1,7 +1,5 @@
-Testing
-
-
-<h2>Name:  <%= @spaceship.name %></h2>
+<h2><%= @spaceship.name %></h2>
+<p></p>
 <p>Description: <%=@spaceship.description %></p>
 <p>Armament: <%= @spaceship.armaments %></p>
 <p>Speed: <%= @spaceship.speed %> lightyears/second</p>
@@ -11,11 +9,18 @@ Testing
 <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
 
 
+
+
+<% if @spaceship.user == current_user %>
+  <%= link_to "Edit Details", edit_spaceship_path(@spaceship), class: "btn btn-primary" %>
+  <%= link_to "Remove My Spaceship", spaceship_path(@spaceship), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+<% end %>
+
+
 <%# <ul class="list-unstyled"> %>
   <%# <% @spaceship.reviews.each do |review| %>
-  <%# <% if booking.review.exist?%> %>
-    <%# <li><%= review.rating %> ⭐️ -
+  <%# <% if booking.review.exist?%>
+    <%# <li><%= review.rating %>
     <%# <%= review.content %>
-    <%# </li> %> %> %>
-  <%# <% end %> %> %>
+    <%# </li> %>
 <%# </ul> %>

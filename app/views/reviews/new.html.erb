@@ -1,1 +1,5 @@
-ne
+<%= simple_form_for([@booking, @review]) do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :comment %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,16 @@
+
+
+<div class="container">
+<br>
+  <h1>Become a Captain! Add your Spaceship below:</h1>
+
+  <%= simple_form_for [@spaceship] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :armaments %>
+      <%= f.input :capacity %>
+      <%= f.input :speed %>
+      <%= f.input :price %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+</div>

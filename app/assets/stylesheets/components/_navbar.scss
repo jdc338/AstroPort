@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  display: flex;
+  position: fixed;
+  width: 100vw;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +12,7 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+.navbar-lewagon h1, h2{
+  font-family: 'Orbitron', sans-serif;
 }
