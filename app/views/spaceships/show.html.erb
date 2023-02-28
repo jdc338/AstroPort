@@ -9,10 +9,11 @@
 
 <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
 
-<%= link_to "Edit Details", edit_spaceship_booking_path(@spaceship), class: "btn btn-primary" %>
 
 
-<% if @spaceship.user = current_user %>
+
+<% if @spaceship.user == current_user %>
+  <%= link_to "Edit Details", edit_spaceship_path(@spaceship), class: "btn btn-primary" %>
   <%= link_to "Remove My Spaceship", spaceship_path(@spaceship), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
 <% end %>
 
