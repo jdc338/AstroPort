@@ -1,0 +1,6 @@
+<%= simple_form_for([@spaceship, @booking]) do |f| %>
+  <%# <%= f.input :rating %>
+  <%# <%= f.input :content %> %> %>
+  <%= f.input :start_date, html5: true: as: :date %>
+  <%= f.submit %>
+<% end %>

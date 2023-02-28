@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  # before_action :set_spaceship, only: %i[new create]
 
   def new
     @spaceship = Spaceship.find(params[:spaceship_id])
@@ -22,4 +23,9 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:spaceship_id, :start_date, :end_date)
   end
+
+  # def set_spaceship
+  #   @spaceship = Spaceship.find(params[:spaceship_id])
+  # end
+
 end
