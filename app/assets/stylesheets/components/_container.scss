@@ -1,7 +1,6 @@
 .containerr {
   background-image: url("starry-galaxy.jpeg");
   width: 100%;
-  padding: 100px;
 }
 
 .filters {
@@ -9,11 +8,14 @@
   overflow: scroll;
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
+
 }
 
 .filter {
   padding: 90px;
   color: white;
+  text-align: center;
+
 }
 
 .content {

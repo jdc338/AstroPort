@@ -1,30 +1,25 @@
 <div class="containerr">
-  <div class="filters">
-    <%# <div class="filter">Luxury</div>
-    <div class="filter">Speed+</div>
-    <div class="filter">Scenic</div>
-    <div class="filter">Trending</div>
-    <div class="filter">Private</div> %>
-    <div class="filter">Mercury</div>
-    <div class="filter">Venus</div>
-    <div class="filter">Mars</div>
-    <div class="filter">Jupiter</div>
-    <div class="filter">Saturn</div>
-    <div class="filter">Uranus</div>
-    <div class="filter">Pluto</div>
+  <div class="filters justify-content-center">
+    <div class="filter"><%= image_tag("mercury.png", height: '40', width: '40') %>Mercury</div>
+    <div class="filter"><%= image_tag("venus.png", height: '40', width: '40') %>Venus</div>
+    <div class="filter"><%= image_tag("mars.png", height: '40', width: '40') %>Mars</div>
+    <div class="filter"><%= image_tag("jupiter.png", height: '40', width: '40') %>Jupiter</div>
+    <div class="filter"><%= image_tag("saturn.png", height: '40', width: '40') %>Saturn</div>
+    <div class="filter"><%= image_tag("uranus.png", height: '40', width: '40') %>Uranus</div>
+    <div class=filter><%= image_tag("neptune.png", height: '40', width: '40') %>Neptune</div>
   </div>
+
   <% ships= ["millennium-falcon.png", "RazorCrest.webp", "u-wing.webp", "Ghost2.webp"] %>
   <% descriptions= ["Beautiful ship", "Nice looking ship", "Average looking ship", "Ugly looking ship"] %>
-  <div class="row">
+  <div class="row justify-content-center">
     <% @spaceships.each do |spaceship| %>
-      <div class="card col-5">
+        <%= link_to spaceship_path(spaceship), class:"card col-5" do %>
         <%= image_tag("#{ships.sample}", height: '150', width: '200') %>
-        <%= link_to spaceship.name, spaceship_path(spaceship) %>
         <h6>Captain: <%= spaceship.description %></h6>
         <p></p>
         <h6>Description: <%= "#{descriptions.sample}" %></h6>
         <p></p>
         <h6>Rating: <%= rand(1..5) %><%= image_tag("gold_star.png", height: '20', width: '20') %></h6>
-      </div>
+      <% end %>
     <% end %>
 </div>
