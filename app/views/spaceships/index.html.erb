@@ -1,6 +1,4 @@
 <div class="container">
-  All Spaceships
-  <p></p>
   <div class="filters">
     <div class="filter">Luxury</div>
     <div class="filter">Speed+</div>
@@ -15,6 +13,17 @@
     <div class="filter">Uranus</div>
     <div class="filter">Pluto</div>
   </div>
-
+  <% ships= ["millennium-falcon.webp", "helmet-ship.png", "Star-Destroyer.jpeg", "clawcraft.webp"] %>
+  <div class="content">
+    <% @spaceships.each do |spaceship| %>
+      <div class="card">
+      <%= image_tag("#{ships.sample}", height: '150', width: '200') %>
+      <%= link_to spaceship.name, spaceship_path(spaceship) %>
+      Captain:
+      <p></p>
+      Description:
+      <p></p>
+      Rating:
+      </div>
     <% end %>
 </div>

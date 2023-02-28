@@ -22,7 +22,7 @@ user1 = User.create(email: "email@email.com", password: "password")
 armaments = ["miniguns", "lasers", "neutron bombs", "tractor beam", "supernova atomizer 410", "eugogolizer", "trebuchet"]
 # planet = ["Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Pluto"]
 
-15.times do
+100.times do
   Spaceship.create(
     name: Faker::Movies::StarWars.vehicle,
     description: Faker::Movies::StarWars.character,
