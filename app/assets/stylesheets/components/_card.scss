@@ -1,18 +1,17 @@
 .card {
+  background-color: rgba(0,0,0,0.0);
   background-size: cover;
   background-position: center;
   height: 400px;
   width: 317px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(255,255,255,1);
   display: flex;
   align-items: left;
   justify-content: space-around;
   font-size: 22px;
-  color: black;
-  // font-weight: bolder;
-  // text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  color: white;
   padding: 20px;
-  // text-decoration: none;
+  margin: 25px;
+  border: 1px, solid, white;
 }
-
