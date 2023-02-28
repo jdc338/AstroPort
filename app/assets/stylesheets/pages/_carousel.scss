@@ -1,5 +1,6 @@
 .carousel {
   display: flex;
+  color: rgb(10, 255, 5);
 }
 
 .carousel img {
@@ -9,4 +10,10 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
+
 }
+ .carousel-caption {
+  color:rgb(10, 255, 5);
+  
+ }
