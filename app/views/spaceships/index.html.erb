@@ -19,6 +19,11 @@
   <div class="content">
     <% @spaceships.each do |spaceship| %>
       <div class="card"><%= spaceship.name %></div>
+
+  <br>
+
+    <% @spaceships.each do |spaceship| %>
+      <%= link_to spaceship.name, spaceship_path(spaceship) %>
     <% end %>
   </div>
 
