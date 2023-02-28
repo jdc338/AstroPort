@@ -1,11 +1,13 @@
-.content {
-  display: flex;
-}
-
 .filters {
   display: flex;
 }
 
 .filter {
   padding: 30px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
 }
