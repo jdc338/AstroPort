@@ -1,12 +1,23 @@
 <div class="container">
   All Spaceships
-
-
-    <% @spaceships.each do |spaceship| %>
-      <%= link_to spaceship.name, spaceship_path(spaceship) %>
-    <% end %>
+  <p></p>
+  <div class="filters">
+    <div class="filter">Luxury</div>
+    <div class="filter">Speed+</div>
+    <div class="filter">Scenic</div>
+    <div class="filter">Trending</div>
+    <div class="filter">Private</div>
+    <div class="filter">Mercury</div>
+    <div class="filter">Venus</div>
+    <div class="filter">Mars</div>
+    <div class="filter">Jupiter</div>
+    <div class="filter">Saturn</div>
+    <div class="filter">Uranus</div>
+    <div class="filter">Pluto</div>
   </div>
-
-
-
+  <div class="content">
+    <% @spaceships.each do |spaceship| %>
+      <div class="card"><%= link_to spaceship.name, spaceship_path(spaceship) %>
+      </div>
+    <% end %>
 </div>
