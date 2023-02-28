@@ -3,93 +3,58 @@
 
 <div class="banner" >
   <div class="banner-content">
-    <h1>AstroPort</h1>
-  </div>
-
-</div>
-
-<div class="ship-type-cards">
-  <div class="ship-type-card">
-      <img src="" alt="">
-      Ship type 1</div>
-  <div class="ship-type-card">
-      <img src="" alt="">
-      Ship type 2</div>
-  <div class="ship-type-card">
-      <img src="" alt="">
-      Ship type 3</div>
-</div>
-
-
-<div class="top-ships">
-  <h2>Top rated ships for ...</h2>
-  <div class="ship-card">
-    <img src="" alt="">
-    <h3>name:</h3>
-    <h4>captain:</h4>
-    <p>price:</p>
-    <p>rating:</p>
-  </div>
-
-  <div class="ship-card">
-    <img src="" alt="">
-    <h3>name:</h3>
-    <h4>captain:</h4>
-    <p>price:</p>
-    <p>rating:</p>
-  </div>
-
-  <div class="ship-card">
-    <img src="" alt="">
-    <h3>name:</h3>
-    <h4>captain:</h4>
-    <p>price:</p>
-    <p>rating:</p>
-  </div>
-
-  <div class="ship_card">
-    <img src="" alt="">
-    <h3>name:</h3>
-    <h4>captain:</h4>
-    <p>price:</p>
-    <p>rating:</p>
+    <h1 class="fa-solid fa-rocket" >AstroPort</h1>
   </div>
 </div>
 
-<div class="container" id="Top_ships">
-  <h2>Top rated ships for ...</h2>
-  <div class="ship_card">
-    <img src="" alt="">
-    <h3>name:</h3>
-    <h4>captain:</h4>
-    <p>price:</p>
-    <p>rating:</p>
+    <button><%= link_to "See all spaceships", to: "spaceships/index" %></button>
+
+<div class="container">
+  <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
 
-  <div class="ship_card">
-    <img src="" alt="">
-    <h3>name:</h3>
-    <h4>captain:</h4>
-    <p>price:</p>
-    <p>rating:</p>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+       <%= image_tag("spaceship-one.jpeg") %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Whatever your budget we can get you from A to BetaGammaV!</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <%= image_tag("spaceship-two.jpeg") %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <%= image_tag("spaceship-three.jpeg")  %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="ship_card">
-    <img src="" alt="">
-    <h3>name:</h3>
-    <h4>captain:</h4>
-    <p>price:</p>
-    <p>rating:</p>
-  </div>
-
-  <div class="ship_card">
-    <img src="" alt="">
-    <h3>name:</h3>
-    <h4>captain:</h4>
-    <p>price:</p>
-    <p>rating:</p>
-  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
+</div>
+
+
 
 <div class="footer">
   <p>Stuff stuff stuff</p>
