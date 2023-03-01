@@ -106,7 +106,7 @@ deathstar = Spaceship.new(
   rating: 5.5,
   user_id: user1.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674563/AstroPort/DeathStar_ac9czm.webp")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680741/AstroPort/124-1240061_death-star-2-png-graphic-death-star-star_tmia1n.png")
     deathstar.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     deathstar.save!
 
@@ -121,7 +121,7 @@ executor = Spaceship.new(
   rating: 5.5,
   user_id: user2.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674622/AstroPort/executor_s2tplj.jpg")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680741/AstroPort/Executor_has6kl.png")
     executor.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     executor.save!
 
@@ -135,7 +135,7 @@ homeone = Spaceship.new(
   rating: 5.5,
   user_id: user3.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674661/AstroPort/homeone_tp8t8g.jpg")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680741/AstroPort/Home_one_gft5lg.png")
     homeone.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     homeone.save!
 
@@ -149,7 +149,7 @@ landingcraft = Spaceship.new(
   rating: 5.5,
   user_id: user4.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674732/AstroPort/landing_craft_eevd8t.jpg")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680854/AstroPort/Imperial_landing_craft_nrlkrh.png")
     landingcraft.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     landingcraft.save!
 
@@ -177,7 +177,7 @@ spaceshipstar = Spaceship.new(
   rating: 5.5,
   user_id: user6.id
 )
-  file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674847/AstroPort/stardestroyer_pepvrx.jpg")
+  file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680740/AstroPort/Star_Destroyer_beqjvp.webp")
     spaceshipstar.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     spaceshipstar.save!
 
@@ -192,7 +192,7 @@ falcon = Spaceship.new(
   rating: 5.5,
   user_id: user7.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674901/AstroPort/milleniumfalcon_sxhx6g.webp")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680741/AstroPort/milleniumfalcon_aedmqy.webp")
     falcon.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     falcon.save!
 
@@ -220,7 +220,7 @@ wing = Spaceship.new(
   rating: 5.5,
   user_id: user9.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674984/AstroPort/xwing_xqkgin.jpg")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680741/AstroPort/X_wing_yzbspt.png")
     wing.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     wing.save!
 
@@ -234,7 +234,7 @@ tie = Spaceship.new(
   rating: 5.5,
   user_id: user10.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677675023/AstroPort/tiefighter_xq2tpy.jpg")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680854/AstroPort/Tie_fighter_vbfeys.png")
     tie.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     tie.save!
 
@@ -248,9 +248,9 @@ yship = Spaceship.new(
   rating: 5.5,
   user_id: user11.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677675061/AstroPort/ywing_aqgrtr.jpg")
-    spaceshipstar.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-    spaceshipstar.save!
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680740/AstroPort/Y_wing_awwehu.webp")
+    yship.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    yship.save!
 
 spaceshipimg = Spaceship.new(
   name: "B-wing",
@@ -262,6 +262,6 @@ spaceshipimg = Spaceship.new(
   rating: 5.5,
   user_id: user12.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677675101/AstroPort/bwing_u6qi33.jpg76")
-spaceshipimg.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-spaceshipimg.save!
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674661/AstroPort/homeone_tp8t8g.jpg")
+    spaceshipimg.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    spaceshipimg.save!
