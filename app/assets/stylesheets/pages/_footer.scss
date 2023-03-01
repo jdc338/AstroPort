@@ -1,13 +1,24 @@
 .footer {
-  display: flex;
   height: 50px;
-  align-items: end;
-  // position: fixed;
-  position: relative;
-  bottom: 0;
   width: 100%;
-  background-color: white;
+  position: static;
+  left: 0;
+  bottom: 0;
   background-image: url("starry-galaxy");
   color: rgb(10, 255, 5);
-  margin-top: auto;
 }
+
+.footer p {
+  padding-top: 10px;
+}
+
+
+// .footer {
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+//   text-align: center;
+//   width: 100%;
+//   background-color: red;
+//   color: white;
+// }
