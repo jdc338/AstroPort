@@ -7,6 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # Spaceship.destroy_all
 require 'faker'
+require "open-uri"
+
 puts "destroying seeds"
 # Review.destroy_all
 Review.destroy_all
@@ -94,7 +96,7 @@ user12 = User.create(
   password: "password12"
 )
 
-Spaceship.create(
+deathstar = Spaceship.new(
   name: "Death Star",
   description: "The Death Star was the Empire's ultimate weapon: a moon-sized space station with the ability to destroy an entire planet.",
   armaments: armaments.sample,
@@ -104,7 +106,12 @@ Spaceship.create(
   rating: 5.5,
   user_id: user1.id
 )
-Spaceship.create(
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674563/AstroPort/DeathStar_ac9czm.webp")
+    deathstar.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    deathstar.save!
+
+
+executor = Spaceship.new(
   name: "Executor",
   description: "The Executor was an Executor-class Star Dreadnought and personal flagship of the Sith Lord Darth Vader.",
   armaments: armaments.sample,
@@ -114,7 +121,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user2.id
 )
-Spaceship.create(
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674622/AstroPort/executor_s2tplj.jpg")
+    executor.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    executor.save!
+
+homeone = Spaceship.new(
   name: "Home One",
   description: "The headquarters frigate of the Rebel Alliance fleet, Home One began its existence as a civilian exploration vessel.",
   armaments: armaments.sample,
@@ -124,8 +135,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user3.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674661/AstroPort/homeone_tp8t8g.jpg")
+    homeone.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    homeone.save!
 
-Spaceship.create(
+landingcraft = Spaceship.new(
   name: "Imperial landing craft",
   description: "A Sentinel-class landing craft, also known as a Sentinel-class shuttle, Sentinel assault shuttle or Imperial landing craft.",
   armaments: armaments.sample,
@@ -135,8 +149,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user4.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674732/AstroPort/landing_craft_eevd8t.jpg")
+    landingcraft.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    landingcraft.save!
 
-Spaceship.create(
+shuttle = Spaceship.new(
   name: "Imperial shuttle",
   description: "It has three wings: a stationary center foil and two articulated flanking wings.",
   armaments: armaments.sample,
@@ -146,8 +163,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user5.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674778/AstroPort/shuttle_uow4ox.jpg")
+    shuttle.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    shuttle.save!
 
-Spaceship.create(
+spaceshipstar = Spaceship.new(
   name: "Imperial Star Destroyer",
   description: "The wedge-shaped Imperial Star Destroyer is a capital ship bristling with weapons emplacements.",
   armaments: armaments.sample,
@@ -157,8 +177,12 @@ Spaceship.create(
   rating: 5.5,
   user_id: user6.id
 )
+  file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674847/AstroPort/stardestroyer_pepvrx.jpg")
+    spaceshipstar.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    spaceshipstar.save!
 
-Spaceship.create(
+
+falcon = Spaceship.new(
   name: "Millennium Falcon",
   description: "The Millennium Falcon was a YT-1300 light freighter of the YT-1300f variety.",
   armaments: armaments.sample,
@@ -168,8 +192,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user7.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674901/AstroPort/milleniumfalcon_sxhx6g.webp")
+    falcon.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    falcon.save!
 
-Spaceship.create(
+frigate = Spaceship.new(
   name: "Rebel Medical Frigate",
   description: "The EF76 Nebulon-B escort frigate, also known as the Nebulon-B frigate, was a class of frigate manufactured by Kuat Drive Yards.",
   armaments: armaments.sample,
@@ -179,8 +206,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user8.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674945/AstroPort/medfrigate_jaiqpy.jpg")
+    frigate.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    frigate.save!
 
-Spaceship.create(
+wing = Spaceship.new(
   name: "X-wing",
   description: "The X-wing is a versatile Rebel Alliance starfighter that balances speed with firepower. Armed with four laser cannons and two proton torpedo launchers.",
   armaments: armaments.sample,
@@ -190,8 +220,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user9.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674984/AstroPort/xwing_xqkgin.jpg")
+    wing.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    wing.save!
 
-Spaceship.create(
+tie = Spaceship.new(
   name: "TIE Fighter",
   description: "TIE fighters are depicted as fast, agile, yet fragile starfighters produced by Sienar Fleet Systems lactic Empire.",
   armaments: armaments.sample,
@@ -201,8 +234,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user10.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677675023/AstroPort/tiefighter_xq2tpy.jpg")
+    tie.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    tie.save!
 
-Spaceship.create(
+yship = Spaceship.new(
   name: "Y-wing",
   description: "The Y-wing is a workhorse starfighter has been in use since the Clone Wars. Used for dogfights and for bombing runs.",
   armaments: armaments.sample,
@@ -212,8 +248,11 @@ Spaceship.create(
   rating: 5.5,
   user_id: user11.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677675061/AstroPort/ywing_aqgrtr.jpg")
+    spaceshipstar.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    spaceshipstar.save!
 
-Spaceship.create(
+spaceshipimg = Spaceship.new(
   name: "B-wing",
   description: "Perhaps the oddest-looking starfighter in the Rebel Alliance fleet, the B-wing fighter is as powerful as it is ungainly.",
   armaments: armaments.sample,
@@ -223,3 +262,6 @@ Spaceship.create(
   rating: 5.5,
   user_id: user12.id
 )
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677675101/AstroPort/bwing_u6qi33.jpg76")
+spaceshipimg.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+spaceshipimg.save!
