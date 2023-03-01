@@ -33,8 +33,6 @@ armaments = ["miniguns", "lasers", "neutron bombs", "tractor beam", "supernova a
 #     speed: rand(100..100_000),
 #     user_id: user1.id
 #   )
-# end
-# puts "done"
 
 user1 = User.create(
   email: "email1@email.com",
