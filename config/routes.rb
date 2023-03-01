@@ -3,12 +3,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :spaceships do
     resources :reviews
-    resources :bookings
+    resources :bookings, except: :index
   end
 
-  get "spaceships/myspaceships", to: "spaceships#index"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-end
+  resources :bookings, only: :index
+  get "myspaceships", to: "spaceships#myindex"

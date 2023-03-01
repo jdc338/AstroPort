@@ -6,16 +6,26 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def index
+    @bookings = Booking.where(user_id: current_user.id)
+  end
+
   def create
     @spaceship = Spaceship.find(params[:spaceship_id])
     @booking = Booking.new(booking_params)
     @booking.spaceship = @spaceship
     @booking.user = current_user
     if @booking.save
-      redirect_to spaceship_bookings_path(@spaceship)
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to booking_path, status: :see_other
   end
 
   private
