@@ -1,14 +1,9 @@
 
 <%# navbar %>
 
-<div class="banner" >
-  <div class="banner-content">
-    <h1 class="fa-solid fa-rocket" >AstroPort  </h1>
-    <%= link_to "See all spaceships", "spaceships" %>
-  </div>
-</div>
-
-
+<h3>Whether you've got a ship lying around or looking for one to make a trip, Astroport is here for you.</h3>
+<h3>AstroPort is a way for fellow space explorers to get together and meet each others exploring needs.</h3>
+<h3><%= link_to "See all spaceships", "spaceships" %></h3>
 
 <div class="container">
   <div id="carouselExampleCaptions" class="carousel slide">
@@ -20,7 +15,7 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active">
-       <%= image_tag("spaceship-one.jpeg") %>
+       <%= cl_image_tag("AstroPort/millennium-falcon_fe8miy") %>
       <div class="carousel-caption d-none d-md-block">
         <h5>Universal space travel</h5>
         <p>Whatever your budget we can get you from A to BetaGammaV!</p>
@@ -28,7 +23,7 @@
     </div>
 
     <div class="carousel-item">
-      <%= image_tag("star-destroyers.jpeg") %>
+      <%= cl_image_tag("AstroPort/spaceship-two_pwr3hf") %>
       <div class="carousel-caption d-none d-md-block">
         <h5>Intergalactic Raiding</h5>
         <p>Whether you're just going to raid some primitive peoples <br> or conquer galaxies, we have the ship for you!</p>
@@ -36,7 +31,7 @@
     </div>
 
     <div class="carousel-item">
-      <%= image_tag("enterprise.webp")  %>
+      <%= cl_image_tag("AstroPort/helmet-ship_gkruy7")  %>
       <div class="carousel-caption d-none d-md-block">
         <h5>Long or short distance space travel</h5>
         <p>We have spaceships for all durations, whether is just a quick hop <br> across the galaxy or a long trip to explore new galaxies.</p>
@@ -53,9 +48,4 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-</div>
-
-
-<div class="footer">
-  <p>2785 AstroPort, Inc.</p>
 </div>
