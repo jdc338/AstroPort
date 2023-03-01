@@ -1,0 +1,15 @@
+
+
+<% @spaceships.each do |spaceship| %>
+  <div class="card m-4">
+    <h2><%= spaceship.name %></h2>
+      <h4>Description: <%= spaceship.description %></h4>
+      <h4>Price: <%= spaceship.price %></h4>
+
+    <%= link_to "Update Info", spaceship_path(spaceship), class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+
+<%#
+<%= link_to "Edit Spaceship", edit_spaceship_path(@spaceship), class: "btn btn-primary" %>
