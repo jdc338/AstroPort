@@ -9,12 +9,11 @@
     <div class=filter><%= image_tag("neptune.png", height: '40', width: '40') %>Neptune</div>
   </div>
 
-  <% ships= ["millennium-falcon.png", "RazorCrest.webp", "u-wing.webp", "Ghost2.webp"] %>
-  <% descriptions= ["Beautiful ship", "Nice looking ship", "Average looking ship", "Ugly looking ship"] %>
+
   <div class="row justify-content-center">
     <% @spaceships.each do |spaceship| %>
         <%= link_to spaceship_path(spaceship), class:"card col-5" do %>
-        <%= image_tag("#{ships.sample}", height: '150', width: '200') %>
+        <%= cl_image_tag spaceship.photo.key, height: '150', width: '200' %>
         <h5><%= spaceship.name %></h5>
         <p></p>
         <h6>Captain: <%= spaceship.id %></h6>
