@@ -10,12 +10,12 @@ require 'faker'
 puts "destroying seeds"
 # Review.destroy_all
 Review.destroy_all
+Booking.destroy_all
 Spaceship.destroy_all
 User.destroy_all
 puts "destroyed"
-# Booking.destroy_all
 
-user1 = User.create(email: "email@email.com", password: "password")
+# user1 = User.create(email: "email@email.com", password: "password")
 # user2 = User.create(email: "lamesd@email.com", password: "sapassword")
 # user3 = User.create(email: "yosdsa@email.com", password: "saspassword")
 
@@ -33,77 +33,193 @@ armaments = ["miniguns", "lasers", "neutron bombs", "tractor beam", "supernova a
 #     speed: rand(100..100_000),
 #     user_id: user1.id
 #   )
-# end
+
+user1 = User.create(
+  email: "email1@email.com",
+  password: "password1"
+)
+
+user2 = User.create(
+  email: "email2@email.com",
+  password: "password2"
+)
+
+user3 = User.create(
+  email: "email3@email.com",
+  password: "password3"
+)
+
+user4 = User.create(
+  email: "email4@email.com",
+  password: "password4"
+)
+
+user5 = User.create(
+  email: "email5@email.com",
+  password: "password5"
+)
+
+user6 = User.create(
+  email: "email6@email.com",
+  password: "password6"
+)
+
+user7 = User.create(
+  email: "email7@email.com",
+  password: "password7"
+)
+
+user8 = User.create(
+  email: "email8@email.com",
+  password: "password8"
+)
+
+user9 = User.create(
+  email: "email9@email.com",
+  password: "password9"
+)
+
+user10 = User.create(
+  email: "email10@email.com",
+  password: "password10"
+)
+
+user11 = User.create(
+  email: "email11@email.com",
+  password: "password11"
+)
+
+user12 = User.create(
+  email: "email12@email.com",
+  password: "password12"
+)
 
 Spaceship.create(
-  name: "Millenium Falcon",
-  description: "Fastest passenger ship in the galaxy. Ace pilot, ex-resistance fighter",
-  armaments: "Wing turrets",
-  price: rand(100_00..100_000_000),
-  capacity: rand(5..100_000),
-  speed: rand(100..100_000),
-  user_id: user1.id,
-  photo: cl_image_tag("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677604767/AstroPort/millennium-falcon_fe8miy.webp")
-)
-Spaceship.create(
-  name: "Star Destroyer",
-  description: "Large galactic cruiser, lodging from super-galaxion Emperor VIP to the rubbish chute. Enjoy martinis, prisoner executions, and the slime jacuzzi as you cruise through the galaxy.",
+  name: "Death Star",
+  description: "The Death Star was the Empire's ultimate weapon: a moon-sized space station with the ability to destroy an entire planet.",
   armaments: armaments.sample,
-  price: rand(100_00..100_000_000),
-  capacity: 100_000,
-  speed: rand(100..100_000),
-  user_id: user2.id,
-  photo: cl_image_tag("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677604767/AstroPort/star-destroyers_wxdzja.jpg")
+  price: 20,
+  capacity: 200,
+  speed: 300,
+  rating: 5.5,
+  user_id: user1.id
 )
 Spaceship.create(
-  name: "ClawCraft",
-  description: "Carrying something you shouldn't be? Going somwhere you don't belong? The clawcraft is a smugglers dream, small, well armed, it travels below radar and in the blink of an eye.",
+  name: "Executor",
+  description: "The Executor was an Executor-class Star Dreadnought and personal flagship of the Sith Lord Darth Vader.",
   armaments: armaments.sample,
-  price: rand(100_00..100_000_000),
-  capacity: 2,
-  speed: rand(100..100_000),
-  user_id: user1.id,
-  photo: cl_image_tag("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677604766/AstroPort/clawcraft_rtnirm.webp")
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user2.id
+)
+Spaceship.create(
+  name: "Home One",
+  description: "The headquarters frigate of the Rebel Alliance fleet, Home One began its existence as a civilian exploration vessel.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user3.id
 )
 
-puts "done"
-# Spaceship.create(
-#   name: "ship",
-#   description: "good ship",
-#   armaments: armaments.sample,
-#   planet: planet.sample,
-#   price: 20,
-#   capacity: 200,
-#   speed: 300,
-#   rating: 5.5,
-#   user_id: user1.id
-# )
-# Spaceship.create(
-#   name: "ship2",
-#   description: "good ship",
-#   armaments: armaments.sample,
-#   planet: planet.sample,
-#   price: 20,
-#   capacity: 200,
-#   speed: 3000,
-#   rating: 5.5,
-#   user_id: user2.id
-# )
-# Spaceship.create(
-#   name: "ship3",
-#   description: "good ship",
-#   armaments: armaments.sample,
-#   planet: planet.sample,
-#   price: 20,
-#   capacity: 200,
-#   speed: 3000,
-#   rating: 5.5,
-#   user_id: user3.id
-# )
+Spaceship.create(
+  name: "Imperial landing craft",
+  description: "A Sentinel-class landing craft, also known as a Sentinel-class shuttle, Sentinel assault shuttle or Imperial landing craft.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user4.id
+)
 
-# 10.times do
-#   User.create(
-#   email: "email@email.com",
-#   password: "password"
-# )
-# end
+Spaceship.create(
+  name: "Imperial shuttle",
+  description: "It has three wings: a stationary center foil and two articulated flanking wings.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user5.id
+)
+
+Spaceship.create(
+  name: "Imperial Star Destroyer",
+  description: "The wedge-shaped Imperial Star Destroyer is a capital ship bristling with weapons emplacements.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user6.id
+)
+
+Spaceship.create(
+  name: "Millennium Falcon",
+  description: "The Millennium Falcon was a YT-1300 light freighter of the YT-1300f variety.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user7.id
+)
+
+Spaceship.create(
+  name: "Rebel Medical Frigate",
+  description: "The EF76 Nebulon-B escort frigate, also known as the Nebulon-B frigate, was a class of frigate manufactured by Kuat Drive Yards.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user8.id
+)
+
+Spaceship.create(
+  name: "X-wing",
+  description: "The X-wing is a versatile Rebel Alliance starfighter that balances speed with firepower. Armed with four laser cannons and two proton torpedo launchers.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user9.id
+)
+
+Spaceship.create(
+  name: "TIE Fighter",
+  description: "TIE fighters are depicted as fast, agile, yet fragile starfighters produced by Sienar Fleet Systems lactic Empire.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user10.id
+)
+
+Spaceship.create(
+  name: "Y-wing",
+  description: "The Y-wing is a workhorse starfighter has been in use since the Clone Wars. Used for dogfights and for bombing runs.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user11.id
+)
+
+Spaceship.create(
+  name: "B-wing",
+  description: "Perhaps the oddest-looking starfighter in the Rebel Alliance fleet, the B-wing fighter is as powerful as it is ungainly.",
+  armaments: armaments.sample,
+  price: 20,
+  capacity: 200,
+  speed: 3000,
+  rating: 5.5,
+  user_id: user12.id
+)
