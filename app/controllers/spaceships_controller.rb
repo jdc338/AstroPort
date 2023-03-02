@@ -3,10 +3,11 @@ class SpaceshipsController < ApplicationController
 
   def index
     @spaceships = Spaceship.all
-    if params[:query].present?
+    if params[:query].to_i.positive?
+      capacity_query = params[:query].to_i
+      @spaceships = Spaceship.where("capacity >= #{capacity_query}")
+    elsif params[:query].present?
       @spaceships = Spaceship.where("name ILIKE ?", "%#{params[:query]}%")
-    # if params[:query].integer?
-    #   @spaceships = Spaceship.where("capacity ILIKE ?", "%#{params[:query]}%")
     else
       @spaceships = Spaceship.all
     end

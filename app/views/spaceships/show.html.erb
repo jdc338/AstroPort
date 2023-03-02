@@ -9,11 +9,17 @@
       <p>Price: <%= @spaceship.price %> Flugozian Credits.</p>
       <p>Capacity: <%= @spaceship.capacity %> Non-Crew Passengers<p>
     </div>
-    <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :fill %>
+    <% if @spaceship.photo.attached? %>
+      <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :fill %>
+    <% else %>
+      <img src="https://media.sketchfab.com/models/0e97fb0190244216a056909bbd749b9f/thumbnails/77649cbaea4849aeb3c98a70547c39ba/ef0475805a5a4442a15e3b681a0ec389.jpeg" alt="">
+    <% end %>
     <%# <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :contain%>
   </div>
   <p></p>
-    <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
+    <% if @spaceship.user != current_user %>
+      <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
+    <% end %>
     <% if @spaceship.user == current_user %>
       <%= link_to "Edit Details", edit_spaceship_path(@spaceship), class: "btn btn-primary" %>
       <%= link_to "Remove My Spaceship", spaceship_path(@spaceship), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
