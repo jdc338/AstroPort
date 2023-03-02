@@ -33,29 +33,89 @@
   <div class="row justify-content-center">
     <% @spaceships.each do |spaceship| %>
         <%= link_to spaceship_path(spaceship), class:"card col-5" do %>
-        <% if spaceship.photo.attached? %>
-          <%= cl_image_tag spaceship.photo.key, height: '150', width: '200' %>
-        <% else %>
-            <img src="https://media.sketchfab.com/models/0e97fb0190244216a056909bbd749b9f/thumbnails/77649cbaea4849aeb3c98a70547c39ba/ef0475805a5a4442a15e3b681a0ec389.jpeg", height: '150', width: '200'>
-        <% end %>
-        <h5><%= spaceship.name %></h5>
-        <p></p>
-        <h6>Captain: <%= spaceship.id %></h6>
-        <p></p>
-        <h6>Description: <%= spaceship.description%></h6>
-        <p></p>
-        <h6>Rating: <%= rand(1..5) %><%= image_tag("gold_star.png", height: '20', width: '20') %></h6>
-      <% end %>
-    <% end %>
-</div>
 
-<!--
-      <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Passengers..."
-          %>
-          <%= submit_tag "Find", class: "btn btn-dark" %>
-        <% end %>
--->
+<div class="containerrr">
+  <div class="view-page">
+    <div class="card-view">
+      <h2><%= @spaceship.name %></h2>
+      <p></p>
+
+      <p class="view-content">Description: <%=@spaceship.description %></p>
+      <p></p>
+      <p class="view-content">Armament: <%= @spaceship.armaments %></p>
+      <p></p>
+      <p class="view-content">Speed: <%= @spaceship.speed %> lightyears/second</p>
+      <p></p>
+      <p class="view-content">Price: ⓩ<%= @spaceship.price %></p>
+      <p></p>
+      <p class="view-content">Capacity: <%= @spaceship.capacity %><p>
+    </div>
+    
+    
+
+<div class="containerr">
+  <div class="filters justify-content-center">
+    <div class="filter"><%= image_tag("mercury.png", height: '40', width: '40') %><p></p>Mercury</div>
+    <div class="filter"><%= image_tag("venus.png", height: '40', width: '40') %><p></p>Venus</div>
+    <div class="filter"><%= image_tag("mars.png", height: '40', width: '40') %><p></p>Mars</div>
+    <div class="filter"><%= image_tag("jupiter.png", height: '40', width: '40') %><p></p>Jupiter</div>
+    <div class="filter"><%= image_tag("saturn.png", height: '40', width: '40') %><p></p>Saturn</div>
+    <div class="filter"><%= image_tag("uranus.png", height: '40', width: '40') %><p></p>Uranus</div>
+    <div class=filter><%= image_tag("neptune.png", height: '40', width: '40') %><p></p>Neptune</div>
+  </div>
+
+  <div class="container">
+    <div class="searchbar">
+      <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search by name or capacity..."
+        %>
+
+        <%= submit_tag "Launch!", class: "btn btn-dark" %>
+      <% end %>
+
+    </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="row justify-content-center">
+    <% @spaceships.each do |spaceship| %>
+        <%= link_to spaceship_path(spaceship), class:"card col-5" do %>
+my-spaceships
+
+        <% if spaceship.photo.attached? %>
+          <%= cl_image_tag spaceship.photo.key, height: '150', width: '200' %>
+        <% else %>
+            <img src="https://media.sketchfab.com/models/0e97fb0190244216a056909bbd749b9f/thumbnails/77649cbaea4849aeb3c98a70547c39ba/ef0475805a5a4442a15e3b681a0ec389.jpeg", height: '150', width: '200'>
+        <% end %>
+        <div class="card-text">
+          <h5><%= spaceship.name %></h5>
+          <p></p>
+          <h6>Captain: <%= spaceship.id %></h6>
+          <p></p>
+          <h6>Price: ⓩ<%= spaceship.price %></h6>
+          <p></p>
+          <h6>Capacity: <%= spaceship.capacity %></h6>
+          <h6>Rating: <%= rand(1..5) %><%= image_tag("gold_star.png", height: '20', width: '20') %></h6>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+      <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Passengers..."
+          %>
+          <%= submit_tag "Find", class: "btn btn-dark" %>
+        <% end %>
