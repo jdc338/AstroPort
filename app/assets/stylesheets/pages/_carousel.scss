@@ -3,12 +3,13 @@
   color: rgb(10, 255, 5);
   margin-bottom: 20px;
   margin-top: 50px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .carousel img {
   display: flex;
-  height: 400px;
-  width: 500px;
+  height: 600px;
+  width: 800px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -16,5 +17,8 @@
 }
  .carousel-caption {
   color:rgb(10, 255, 5);
-
  }
+
+.carousel-caption h5 {
+  font-family: 'Orbitron', sans-serif;
+}
