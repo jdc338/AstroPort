@@ -1,4 +1,4 @@
-My bookings
+<h1>My Bookings</h1>
 <br>
 
 
@@ -10,8 +10,7 @@ My bookings
                 <h4><%=booking.spaceship.name%></h4>
                 <h6>Start Date: <%= booking.start_date %></h6>
                 <h6>End Date: <%= booking.end_date %></h6>
-                <p class = "btn btn-primary m-4 text-end">
-                  <%= link_to "Cancel Booking", bookings_path(booking), class: "btn btn-primary m-4", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-proimary" %>
+                  <%= link_to "Cancel Booking", bookings_path(booking), class: "btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn" %>
                 </p>
         </ol>
       <% end %>
