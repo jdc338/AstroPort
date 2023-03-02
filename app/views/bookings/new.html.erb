@@ -1,7 +1,5 @@
 
 <body>
-  <br> Because Dan's stupid navbar is hiding start date
-  <br>
   <br>
   <br>
   <%= simple_form_for([@spaceship, @booking]) do |f| %>
@@ -12,7 +10,7 @@
     <%= f.input :end_date, as: :date, html5: true %>
     <%= "Total cost = #{@spaceship.price}"  %>
     <br><br>
-    <%= f.submit %>
+    <%= f.submit%>
   <% end %>
 </body>
 

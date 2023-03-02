@@ -1,21 +1,23 @@
-<div class="container">
-  <div class="card">
-
-    <h2><%= @spaceship.name %></h2>
-    <%# <p><%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %></p> %>
-    <p>Description: <%=@spaceship.description %></p>
-    <p>Armament: <%= @spaceship.armaments %></p>
-    <p>Speed: <%= @spaceship.speed %> lightyears/second</p>
-    <p>Price: <%= @spaceship.price %> flugozian credits.</p>
-    <p>Capacity: <%= @spaceship.capacity %> non-crew passengers (divide by 5 for amalfous blobs)<p>
+<div class="containerrr">
+  <div class="view-page">
+    <div class="card-view">
+      <h2><%= @spaceship.name %></h2>
+      <p></p>
+      <p>Description: <%=@spaceship.description %></p>
+      <p>Armament: <%= @spaceship.armaments %></p>
+      <p>Speed: <%= @spaceship.speed %> lightyears/second</p>
+      <p>Price: <%= @spaceship.price %> flugozian credits.</p>
+      <p>Capacity: <%= @spaceship.capacity %> non-crew passengers (divide by 5 for amalfous blobs)<p>
+    </div>
+    <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :fill %>
+    <%# <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :contain%>
   </div>
+  <p></p>
     <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
-
     <% if @spaceship.user == current_user %>
       <%= link_to "Edit Details", edit_spaceship_path(@spaceship), class: "btn btn-primary" %>
       <%= link_to "Remove My Spaceship", spaceship_path(@spaceship), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
     <% end %>
-
 </div>
 <%# <ul class="list-unstyled"> %>
   <%# <% @spaceship.reviews.each do |review| %>

@@ -1,4 +1,17 @@
 My bookings
 <br>
-<%# <% if @spaceship.booking == current_user %>
-<%# <% @list.bookmarks.each do |bookmark| %>
+
+
+<% @bookings.each do |booking| %>
+        <ol>
+        <div class="card m-4">
+          <div class="card-header p-3">
+              <div class="card-body">
+                <h4><%=booking.spaceship.name%></h4>
+                <h6>Start Date: <%= booking.start_date %></h6>
+                <h6>End Date: <%= booking.end_date %></h6>
+                <p class = "btn btn-primary m-4 text-end">
+                  <%= link_to "Cancel Booking", bookings_path(booking), class: "btn btn-primary m-4", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-proimary" %>
+                </p>
+        </ol>
+      <% end %>
