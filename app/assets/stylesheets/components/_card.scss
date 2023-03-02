@@ -15,35 +15,28 @@
   margin: 25px;
   border: 1px, solid, white;
   transition: 0.35s;
+  letter-spacing: 2px;
 }
 
 .card:hover {
   transition: 0.35s;
   color: rgba(255,255,255,1);
-  text-shadow: 0 0 10px rgb(10, 255, 5);
+  text-shadow: 0 0 10px rgba(255,255,255,1);
   box-shadow: 0 0 80px rgba(255,255,255,1);
   animation: shake 30s;
   animation-iteration-count: infinite;
   height: 430px;
-  width: 330px;
-}
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  width: 324px;
 }
 
 img {
   margin: auto;
+}
+
+.view-img {
+  margin: auto;
+  animation: shake 10s;
+  animation-iteration-count: infinite;
 }
 
 .card-view {
@@ -53,11 +46,19 @@ img {
   height: 600px;
   width: 600px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255,255,255,1);
   align-items: left;
   justify-content: space-around;
   font-size: 22px;
   color: rgb(10, 255, 5);
   padding: 20px;
   border: 1px, solid, white;
+  letter-spacing: 2px;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
 }

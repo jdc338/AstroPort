@@ -20,13 +20,9 @@
 
 .filter:hover {
   color: rgba(255,255,255,1);
-  // text-shadow: 0 0 30px rgba(255,255,255,1);
-  // box-shadow: 0 0 80px rgba(255,255,255,1);
-  animation: shake 8s;
+  animation: shake 3s;
   animation-iteration-count: infinite;
-  // height: 120px;
-  // width: 150px;
-  transition: 1s;
+  transition: 0.1s;
 }
 
 @keyframes shake {
@@ -58,4 +54,10 @@
 .view-page {
   display: flex;
   gap: 100px
+}
+
+.view-content {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,1);
+  padding: 15px;
 }

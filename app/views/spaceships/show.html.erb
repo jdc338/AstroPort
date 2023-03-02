@@ -3,16 +3,19 @@
     <div class="card-view">
       <h2><%= @spaceship.name %></h2>
       <p></p>
-      <p>Description: <%=@spaceship.description %></p>
-      <p>Armament: <%= @spaceship.armaments %></p>
-      <p>Speed: <%= @spaceship.speed %> lightyears/second</p>
-      <p>Price: <%= @spaceship.price %> flugozian credits.</p>
-      <p>Capacity: <%= @spaceship.capacity %> non-crew passengers (divide by 5 for amalfous blobs)<p>
+      <p class="view-content">Description: <%=@spaceship.description %></p>
+      <p></p>
+      <p class="view-content">Armament: <%= @spaceship.armaments %></p>
+      <p></p>
+      <p class="view-content">Speed: <%= @spaceship.speed %> lightyears/second</p>
+      <p></p>
+      <p class="view-content">Price: ⓩ<%= @spaceship.price %></p>
+      <p></p>
+      <p class="view-content">Capacity: <%= @spaceship.capacity %><p>
     </div>
-    <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :fill %>
-    <%# <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :contain%>
+    <div class="view-img"><%=cl_image_tag @spaceship.photo.key, height: 600, width: 650%></div>
   </div>
-  <p></p>
+  <br>
     <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
     <% if @spaceship.user == current_user %>
       <%= link_to "Edit Details", edit_spaceship_path(@spaceship), class: "btn btn-primary" %>
