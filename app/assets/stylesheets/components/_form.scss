@@ -1,0 +1,40 @@
+.form-inputs {
+  margin-left: 40px;
+  margin-right: 30px;
+
+}
+
+.form-container {
+  margin: 100px auto;
+  width: 33%;
+  font-family: 'orbitron', sans-serif;
+}
+
+.form-actions {
+  margin-left: 40px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-bar .form-control{
+ box-shadow: 0px 0px 10px rgb(255, 0, 0);
+ border-radius: 50px;
+ color:rgb(10, 255, 5);
+ background-color: rgb(0, 0, 0);
+}
+
+.form-check-input{
+  box-shadow: 0px 0px 10px rgb(255, 0, 0);
+  color:rgb(10, 255, 5);
+  background-color: rgb(0, 0, 0);
+}
+
+.form-text {
+  color: white;
+  font-size: 11px;
+}
+
+a {
+  color:rgb(10, 255, 5);
+}
