@@ -1,4 +1,5 @@
 .footer {
+  display: flex;
   height: 50px;
   width: 100%;
   position: fixed;
@@ -6,19 +7,16 @@
   bottom: 0;
   background-image: url("starry-galaxy");
   color: rgb(10, 255, 5);
+  justify-content: space-between;
 }
 
 .footer p {
   padding-top: 10px;
+  padding-left: 10px;
 }
 
-
-// .footer {
-//   position: fixed;
-//   left: 0;
-//   bottom: 0;
-//   text-align: center;
-//   width: 100%;
-//   background-color: red;
-//   color: white;
-// }
+.footer h3 {
+  text-align: end;
+  padding-top: 10px;
+  padding-right: 10px;
+}
