@@ -1,0 +1,19 @@
+#spaceship-btn {
+  background-color: rgba(0,0,0,0);
+  justify-content: end;
+  text-align: center;
+  color: rgb(10, 255, 5);
+  border: solid rgb(10, 255, 5);
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  transition: 1s;
+}
+
+#spaceship-btn:hover {
+  color: white;
+  border: solid white;
+  box-shadow: 0 0 80px rgba(255,255,255,1); ;
+  font-size: 30px;
+  transition: 1s;
+}
