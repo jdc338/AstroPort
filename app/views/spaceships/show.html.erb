@@ -3,18 +3,17 @@
     <div class="card-view">
       <h2><%= @spaceship.name %></h2>
       <p></p>
-      <p>Description: <%=@spaceship.description %></p>
-      <p>Armament: <%= @spaceship.armaments %></p>
-      <p>Speed: <%= @spaceship.speed %> Lightyears/Second</p>
-      <p>Price: <%= @spaceship.price %> Flugozian Credits.</p>
-      <p>Capacity: <%= @spaceship.capacity %> Non-Crew Passengers<p>
+      <p><div class="view-content">Description: <%=@spaceship.description %></p></div>
+      <p><div class="view-content">Armament: <%= @spaceship.armaments %></p></div>
+      <p><div class="view-content">Speed: <%= @spaceship.speed %> Lightyears/Second</p></div>
+      <p><div class="view-content">Price: ⓩ<%= @spaceship.price %> Flugozian Credits.</p></div>
+      <p><div class="view-content">Capacity: <%= @spaceship.capacity %> Non-Crew Passengers<p></div>
     </div>
     <% if @spaceship.photo.attached? %>
-      <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :fill %>
+      <div class="view-img"><%= cl_image_tag @spaceship.photo.key, height: 600, width: 650 %></div>
     <% else %>
-      <img src="https://media.sketchfab.com/models/0e97fb0190244216a056909bbd749b9f/thumbnails/77649cbaea4849aeb3c98a70547c39ba/ef0475805a5a4442a15e3b681a0ec389.jpeg" alt="">
+      <div class="view-img"><img src="https://media.sketchfab.com/models/0e97fb0190244216a056909bbd749b9f/thumbnails/77649cbaea4849aeb3c98a70547c39ba/ef0475805a5a4442a15e3b681a0ec389.jpeg" alt=""></div>
     <% end %>
-    <%# <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :contain%>
   </div>
   <p></p>
     <% if @spaceship.user != current_user %>

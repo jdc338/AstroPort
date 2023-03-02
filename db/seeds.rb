@@ -30,12 +30,8 @@ armaments = ["miniguns", "lasers", "neutron bombs", "tractor beam", "supernova a
 #     speed: rand(100..100_000),
 #     user_id: user1.id
 #   )
-<<<<<<< HEAD
-puts "created first user"
-user1 = User.create!(
-=======
+
 user1 = User.create(
->>>>>>> c9f5411718acf9545e7eee32ec92ac7552f43592
   email: "email1@email.com",
   password: "password1"
 )

@@ -20,12 +20,36 @@
 .card:hover {
   transition: 0.35s;
   color: rgba(255,255,255,1);
-  text-shadow: 0 0 10px rgb(10, 255, 5);
+  text-shadow: 0 0 10px rgba(255,255,255,1);
   box-shadow: 0 0 80px rgba(255,255,255,1);
   animation: shake 30s;
   animation-iteration-count: infinite;
   height: 430px;
   width: 330px;
+}
+
+
+img {
+  margin: auto;
+}
+
+.view-img {
+  margin: auto;
+  animation: shake 10s;
+  animation-iteration-count: infinite;
+}
+
+.card-view {
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+  align-items: left;
+  justify-content: space-around;
+  font-size: 22px;
+  color: rgb(10, 255, 5);
+  padding: 20px;
+  border: 1px, solid, white;
+  letter-spacing: 2px;
 }
 
 @keyframes shake {
@@ -40,24 +64,4 @@
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-img {
-  margin: auto;
-}
-
-.card-view {
-  background-color: rgba(0,0,0,0.0);
-  background-size: cover;
-  background-position: center;
-  height: 600px;
-  width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255,255,255,1);
-  align-items: left;
-  justify-content: space-around;
-  font-size: 22px;
-  color: rgb(10, 255, 5);
-  padding: 20px;
-  border: 1px, solid, white;
 }
