@@ -15,22 +15,16 @@
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find your Spaceship..."
+          placeholder: "Search by name or capacity..."
         %>
         <%= submit_tag "Launch!", class: "btn btn-dark" %>
       <% end %>
 
+
+
     </div>
   </div>
 
-  <%# <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
-          <%# <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Passengers..."
-          %>
-          <%# <%= submit_tag "Find", class: "btn btn-dark" %>
-        <%# <% end %>
 
 
 
@@ -38,7 +32,11 @@
   <div class="row justify-content-center">
     <% @spaceships.each do |spaceship| %>
         <%= link_to spaceship_path(spaceship), class:"card col-5" do %>
-        <%= cl_image_tag spaceship.photo.key, height: '150', width: '200' %>
+        <% if spaceship.photo.attached? %>
+          <%= cl_image_tag spaceship.photo.key, height: '150', width: '200' %>
+        <% else %>
+            <img src="https://media.sketchfab.com/models/0e97fb0190244216a056909bbd749b9f/thumbnails/77649cbaea4849aeb3c98a70547c39ba/ef0475805a5a4442a15e3b681a0ec389.jpeg", height: '150', width: '200'>
+        <% end %>
         <h5><%= spaceship.name %></h5>
         <p></p>
         <h6>Captain: <%= spaceship.id %></h6>
@@ -49,3 +47,14 @@
       <% end %>
     <% end %>
 </div>
+
+<!--
+      <%= form_with url: spaceships_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Passengers..."
+          %>
+          <%= submit_tag "Find", class: "btn btn-dark" %>
+        <% end %>
+-->
