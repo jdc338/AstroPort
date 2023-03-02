@@ -8,6 +8,7 @@
   background-image: url("starry-galaxy");
   color: rgb(10, 255, 5);
   justify-content: space-between;
+  border-top: ridge rgb(10, 9, 9);
 }
 
 .footer p {
@@ -19,4 +20,8 @@
   text-align: end;
   padding-top: 10px;
   padding-right: 10px;
+}
+
+.icons {
+  justify-content: end;
 }
