@@ -3,20 +3,18 @@
     <div class="card-view">
       <h2><%= @spaceship.name %></h2>
       <p></p>
-      <p class="view-content">Description: <%=@spaceship.description %></p>
-      <p></p>
-      <p class="view-content">Armament: <%= @spaceship.armaments %></p>
-      <p></p>
-      <p class="view-content">Speed: <%= @spaceship.speed %> lightyears/second</p>
-      <p></p>
-      <p class="view-content">Price: ⓩ<%= @spaceship.price %></p>
-      <p></p>
-      <p class="view-content">Capacity: <%= @spaceship.capacity %><p>
-    </div>
-    <div class="view-img"><%=cl_image_tag @spaceship.photo.key, height: 600, width: 650%></div>
-  </div>
-  <br>
-    <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
+
+<% if @spaceship.photo.attached? %>
+       <div class="view-img"><%=cl_image_tag @spaceship.photo.key, height: 600, width: 650%></div>
+    <% else %>
+      <img src="https://media.sketchfab.com/models/0e97fb0190244216a056909bbd749b9f/thumbnails/77649cbaea4849aeb3c98a70547c39ba/ef0475805a5a4442a15e3b681a0ec389.jpeg" alt="">
+    <% end %>
+    <%# <%= cl_image_tag @spaceship.photo.key, height: 600, width: 650, crop: :contain%>
+  </div>
+  <br>
+    <% if @spaceship.user != current_user %>
+      <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn btn-primary" %>
+    <% end %>
     <% if @spaceship.user == current_user %>
       <%= link_to "Edit Details", edit_spaceship_path(@spaceship), class: "btn btn-primary" %>
       <%= link_to "Remove My Spaceship", spaceship_path(@spaceship), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
