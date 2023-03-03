@@ -96,7 +96,7 @@ deathstar = Spaceship.new(
 file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680741/AstroPort/124-1240061_death-star-2-png-graphic-death-star-star_tmia1n.png")
     deathstar.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     deathstar.save!
-    
+
 executor = Spaceship.new(
   name: "Executor",
   description: "The Executor was an Executor-class Star Dreadnought and personal flagship of the Sith Lord Darth Vader.",
@@ -197,7 +197,7 @@ file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674945/A
 
 wing = Spaceship.new(
   name: "X-wing",
-  description: "The X-wing is a versatile Rebel Alliance starfighter that balances speed with firepower. Armed with four laser cannons and two proton torpedo launchers.",
+  description: "The X-wing is a versatile Rebel Alliance starfighter that balances speed with firepower.",
   armaments: armaments.sample,
   price: prices.sample,
   capacity: capacities.sample,

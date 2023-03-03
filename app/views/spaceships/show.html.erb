@@ -18,13 +18,12 @@
   <p></p>
     <% if @spaceship.user != current_user %>
       <%= link_to "Make a booking", new_spaceship_booking_path(@spaceship, @booking), class: "btn" %>
-      <%= link_to "Back", spaceships_path, class: "btn"  %>
       <%= link_to "Reviews!", "", class: "btn" %>
+      <%= link_to "Back", spaceships_path, class: "btn"  %>
     <% end %>
     <% if @spaceship.user == current_user %>
       <%= link_to "Edit Details", edit_spaceship_path(@spaceship), class: "btn" %>
       <%= link_to "Remove My Spaceship", spaceship_path(@spaceship), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn" %>
-
 
     <% end %>
     <% @spaceship.reviews.each do |review| %>
