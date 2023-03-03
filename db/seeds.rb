@@ -197,7 +197,7 @@ file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677854066/A
 
 wing = Spaceship.new(
   name: "X-wing",
-  description: "The X-wing is a versatile Rebel Alliance starfighter that balances speed with firepower. Armed with four laser cannons and two proton torpedo launchers.",
+  description: "The X-wing is a versatile Rebel Alliance starfighter that balances speed with firepower.",
   armaments: armaments.sample,
   price: prices.sample,
   capacity: capacities.sample,
