@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :bookings, only: :index
+  resources :bookings, only: [:index, :destroy]
   get "myspaceships", to: "spaceships#myindex"
 
   get "bookings", to: "reviews#new"

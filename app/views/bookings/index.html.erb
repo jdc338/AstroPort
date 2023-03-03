@@ -1,18 +1,27 @@
 <h1>My Bookings</h1>
 <br>
 
+<div class="row justify-content-center">
+  <% @bookings.each do |booking| %>
+          <ol>
+          <div class="card m-4">
+            <div class="card-header p-3">
+                <div class="card-body">
+                  <h4><%=booking.spaceship.name%></h4>
+                  <% if booking.spaceship.photo.attached? %>
+                    <%= cl_image_tag booking.spaceship.photo.key, height: '150', width: '200' %>
+                  <% else %>
+                    <img src="https://media.sketchfab.com/models/0e97fb0190244216a056909bbd749b9f/thumbnails/77649cbaea4849aeb3c98a70547c39ba/ef0475805a5a4442a15e3b681a0ec389.jpeg", height: '150', width: '200'>
+                  <% end %>
+                  <p></p>
+                  <h6>Start: <%= booking.start_date.strftime("%d/%m/%Y") %></h6>
+                  <h6>End: <%= booking.end_date.strftime("%d/%m/%Y") %></h6>
+                  <h6>Total price: <%= total = booking.spaceship.price*((booking.end_date - booking.start_date)/86400) %></h6>
+                  <%= link_to "Cancel Booking", booking_path(booking), class: "btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn" %>
+            </div>
+            </div>
+            </div>
+          </ol>
+        <% end %>
+</div>
 
-<% @bookings.each do |booking| %>
-        <ol>
-        <div class="card m-4">
-          <div class="card-header p-3">
-              <div class="card-body">
-                <h4><%=booking.spaceship.name%></h4>
-                <h6>Start Date: <%= booking.start_date %></h6>
-                <h6>End Date: <%= booking.end_date %></h6>
-                  <%= link_to "Cancel Booking", bookings_path(booking), class: "btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn" %>
-                  <%= link_to "Delete Bookmark", bookings_path(booking), class: "btn btn-primary m-4", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-proimary" %>
-                  <%= link_to "Leave a Review", new_spaceship_booking_review_path(booking.spaceship_id, booking), class: "btn" %>
-                </p>
-        </ol>
-      <% end %>
