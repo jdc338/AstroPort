@@ -1,15 +1,31 @@
-<div class="container">
-<br>
-  <h1>Added some new guns? Ramped up your hyperdrive so it runs on black mass? Update your spaceship below!</h1>
-
-  <%= simple_form_for [@spaceship] do |f| %>
-      <%= f.input :name %>
-      <%= f.input :description %>
-      <%= f.input :armaments %>
-      <%= f.input :capacity %>
-      <%= f.input :speed %>
-      <%= f.input :price %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.button :submit, class: "btn btn-primary" %>
-    <% end %>
+<div class="form-container-spaceship">
+  <div class="form-inputs">
+    <br>
+      <h1>Update your spaceship!</h1>
+      <%= simple_form_for [@spaceship] do |f| %>
+        <div class="form-bar">
+          <%= f.input :name %>
+        </div>
+        <div class="form-bar">
+          <%= f.input :description %>
+        </div>
+        <div class="form-bar">
+          <%= f.input :armaments %>
+        </div>
+        <div class="form-bar">
+          <%= f.input :capacity %>
+        </div>
+        <div class="form-bar">
+          <%= f.input :speed %>
+        </div>
+        <div class="form-bar">
+          <%= f.input :price %>
+        </div>
+        <div class="form-bar">
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.button :submit, class: "btn btn-primary" %>
+        </div>
+        <% end %>
+    </div>
+  </div>
 </div>
