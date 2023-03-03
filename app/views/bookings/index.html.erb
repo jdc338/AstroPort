@@ -18,10 +18,10 @@
                   <h6>End: <%= booking.end_date.strftime("%d/%m/%Y") %></h6>
                   <h6>Total price: <%= total = booking.spaceship.price*((booking.end_date - booking.start_date)/86400) %></h6>
                   <%= link_to "Cancel Booking", booking_path(booking), class: "btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn" %>
+                  <%= link_to "Leave a Review", "", class: "btn" %>
             </div>
             </div>
             </div>
           </ol>
         <% end %>
 </div>
-

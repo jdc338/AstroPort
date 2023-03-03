@@ -96,7 +96,7 @@ deathstar = Spaceship.new(
 file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677680741/AstroPort/124-1240061_death-star-2-png-graphic-death-star-star_tmia1n.png")
     deathstar.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     deathstar.save!
-    
+
 executor = Spaceship.new(
   name: "Executor",
   description: "The Executor was an Executor-class Star Dreadnought and personal flagship of the Sith Lord Darth Vader.",
@@ -149,7 +149,7 @@ shuttle = Spaceship.new(
   rating: rating.sample,
   user_id: user5.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674778/AstroPort/shuttle_uow4ox.jpg")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677854033/AstroPort/pngaaa.com-4284779_jrix4u.png")
     shuttle.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     shuttle.save!
 
@@ -191,7 +191,7 @@ frigate = Spaceship.new(
   rating: rating.sample,
   user_id: user8.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674945/AstroPort/medfrigate_jaiqpy.jpg")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677854066/AstroPort/pngfind.com-space-png-575661_rfby8o.png")
     frigate.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     frigate.save!
 
@@ -247,6 +247,6 @@ spaceshipimg = Spaceship.new(
   rating: rating.sample,
   user_id: user12.id
 )
-file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677674661/AstroPort/homeone_tp8t8g.jpg")
+file = URI.open("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677854549/AstroPort/pngfind.com-star-trek-png-744450_bvaxvb.png")
     spaceshipimg.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
     spaceshipimg.save!
