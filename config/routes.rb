@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :bookings, only: :index
   get "myspaceships", to: "spaceships#myindex"
+  get "upcoming", to: "bookings#upcoming"
 end

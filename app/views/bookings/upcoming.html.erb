@@ -1,0 +1,19 @@
+
+<%# iterate spaceship.bookings %>
+<% @my_spaceships.each do |spaceship|%>
+  <% spaceship.bookings.each do |booking| %>
+    <ol>
+      <div class="card m-4">
+        <div class="card-header p-3">
+          <div class="card-body">
+            <h4><%=booking.spaceship.name%></h4>
+            <h4> <%= booking.user_id %>
+            <h6>Start Date: <%= booking.start_date %></h6>
+            <h6>End Date: <%= booking.end_date %></h6>
+              <%= link_to "Cancel Booking", bookings_path(booking), class: "btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn" %>
+          </div>
+        </div>
+      </div>
+    </ol>
+  <% end %>
+<% end %>
