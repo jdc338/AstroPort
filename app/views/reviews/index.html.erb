@@ -1,0 +1,9 @@
+<h1>My Bookings</h1>
+<br>
+
+
+<% @spaceship.reviews.each do |review| %>
+    <p><%= review.comment %></p>
+    <p><%= review.rating %></p>
+    <%# link_to "See Reviews", new_spaceship_booking_review_path(booking.spaceship_id, booking), class: "btn" %>
+  <% end %>

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get "bookings", to: "reviews#new"
 
+
   get "upcoming", to: "bookings#upcoming"
 
 end

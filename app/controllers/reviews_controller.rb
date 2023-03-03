@@ -1,5 +1,9 @@
 class ReviewsController < ApplicationController
 
+  def index
+    @reviews = Review.all
+  end
+
   def new
     @spaceship = Spaceship.find(params[:spaceship_id])
     @booking = Booking.find(params[:booking_id])
