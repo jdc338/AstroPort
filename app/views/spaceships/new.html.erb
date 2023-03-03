@@ -1,22 +1,35 @@
 
 
-<div class="container">
-  <div class="create">
-  <br>
-    <h1>Become a Captain! Add your Spaceship below:</h1>
+<div class="form-container-spaceship">
+  <div class="form=inputs">
+    <div class="create">
+    <br>
+      <h1>Become a Captain! Add your Spaceship below:</h1>
 
-    <%= simple_form_for [@spaceship] do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :armaments %>
-        <%= f.input :capacity %>
-        <%= f.input :speed %>
-        <%= f.input :price %>
-        <%= f.input :photo, as: :file %>
-        <%= f.button :submit, class: "btn btn-primary" %>
-      <% end %>
+      <%= simple_form_for [@spaceship] do |f| %>
+        <div class="form-bar">
+            <%= f.input :name %>
+          </div>
+          <div class="form-bar">
+            <%= f.input :description %>
+          </div>
+          <div class="form-bar">
+            <%= f.input :armaments %>
+          </div>
+          <div class="form-bar">
+            <%= f.input :capacity %>
+          </div>
+          <div class="form-bar">
+            <%= f.input :speed %>
+          </div>
+          <div class="form-bar">
+            <%= f.input :price %>
+          </div>
+          <div class="form-bar">
+            <%= f.input :photo, as: :file %>
+          </div>
+          <%= f.button :submit, class: "btn" %>
+        <% end %>
+    </div>
   </div>
 </div>
-
-
-
