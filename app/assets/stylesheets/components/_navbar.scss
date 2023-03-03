@@ -2,12 +2,15 @@
   justify-content: space-between;
   // background: #003b59;
   display: flex;
-  position: sticky;
+  position: fixed;
   width: 100vw;
   background-image: url("starry-galaxy.jpeg");
   background-size: cover;
   z-index: 9999;
   color:rgb(10, 255, 5);
+
+  border-bottom: ridge black;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -21,4 +24,13 @@
 .navbar-lewagon h1, h2{
   font-family: 'Orbitron', sans-serif;
   color:rgb(10, 255, 5);
+}
+
+.nav-link {
+  font-family: 'Orbitron', sans-serif;
+  color:rgb(10, 255, 5);
+}
+
+.nav-link:hover {
+  color: white;
 }

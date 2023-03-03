@@ -12,11 +12,17 @@
 @import "components/index";
 @import "pages/index";
 
+
+
+@import "../stylesheets/config/fonts";
+
 body {
   background-image: url("https://res.cloudinary.com/dfi8ju7lr/image/upload/v1677604767/AstroPort/starry-galaxy_oj2c7o.jpg");
   color: rgb(10, 255, 5);
+  font-family: 'Orbitron', sans-serif;
 }
 
-h4, h6 {
-  color: black
+.main-body {
+  padding-top: 74px;
+  padding-bottom: 33px;
 }
