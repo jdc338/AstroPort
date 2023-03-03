@@ -1,4 +1,4 @@
-<div class="containerrr">
+<div class="container">
   <div class="view-page">
     <div class="card-view">
       <h2><%= @spaceship.name %></h2>
@@ -23,11 +23,11 @@
       <%= link_to "Edit Details", edit_spaceship_path(@spaceship), class: "btn" %>
       <%= link_to "Remove My Spaceship", spaceship_path(@spaceship), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn" %>
     <% end %>
+    <% @spaceship.reviews.each do |review| %>
+      <p><%= review.comment %></p>
+      <p><%= review.rating %></p>
+      <%# link_to "See Reviews", new_spaceship_booking_review_path(booking.spaceship_id, booking), class: "btn" %>
+    <% end %>
+
+
 </div>
-<%# <ul class="list-unstyled"> %>
-  <%# <% @spaceship.reviews.each do |review| %>
-  <%# <% if booking.review.exist?%>
-    <%# <li><%= review.rating %>
-    <%# <%= review.content %>
-    <%# </li> %>
-<%# </ul> %>
