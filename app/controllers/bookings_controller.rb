@@ -10,6 +10,18 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user_id: current_user.id)
   end
 
+  def upcoming
+    @my_spaceships = Spaceship.where(user_id: current_user.id)
+    # @bookings = Booking.all
+    # if @bookings.spaceship_id == current_user.spaceship_id
+    #   @bookings.save
+    # end
+
+    # @bookings = booking.where()
+    # find the bookings from the database that contain id of one of spaceships id.
+    # now spaceships contain ids in arra
+  end
+
   def create
     @spaceship = Spaceship.find(params[:spaceship_id])
     @booking = Booking.new(booking_params)
