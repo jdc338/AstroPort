@@ -51,11 +51,13 @@ a {
 
 .searchbar .form-control{
   box-shadow: 0px 0px 10px rgb(255, 0, 0);
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
   color:rgb(10, 255, 5);
   background-color: rgb(0, 0, 0);
   height: 50px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .form-select {
