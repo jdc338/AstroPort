@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :bookings, except: :index
   end
 
-  resources :bookings, only: :index
+  resources :bookings, only: [:index, :destroy]
   get "myspaceships", to: "spaceships#myindex"
 end
