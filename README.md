@@ -2,7 +2,7 @@
 Need a ride to a distant galaxy?
 Browse spaceships and book a ride using [Astroport](https://astroport-jdc338.herokuapp.com/)!
 
-Astroport is an AirBnb clone where passangers can browse and book a spaceship. Captains can add spaceships to their fleet, and manage bookings.
+Astroport is an AirBnb clone where passengers can browse and book a spaceship. Captains can add spaceships to their fleet, and manage bookings.
 
 
 ### Motivation
